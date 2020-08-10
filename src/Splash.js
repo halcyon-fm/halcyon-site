@@ -23,6 +23,7 @@ class Splash extends Component {
   render() {
     return (
       <div className="splash-container">
+        <div className="audio-control mute"/>
         <div className="top-splash-container">
           <div className="splash-child">
             <img className="rotated" src="/logo.png" width="50"/>
@@ -56,6 +57,9 @@ class Splash extends Component {
             <img src="/logo.png" width="50"/>
           </div>
         </div>
+        <audio controls>
+          <source src="website_riff.mp3" type="audio/mp3"/>
+        </audio>
       </div>
     )
   }
@@ -69,3 +73,21 @@ ReactDOM.render(
   </React.StrictMode>,
   document.getElementById('root')
 );
+
+let ac = document.getElementsByClassName("audio-control")[0];
+let a = document.getElementsByTagName("audio")[0];
+let val = 0;
+ac.addEventListener("click", ()=> {
+    if (val == 0) {
+        ac.classList.remove("mute");
+        ac.classList.add("audio");
+        val = 1;
+        a.play();
+    }
+    else {
+        ac.classList.remove("audio");
+        ac.classList.add("mute");
+        val = 0;
+        a.pause();
+    }
+});

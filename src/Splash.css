@@ -160,7 +160,6 @@ body {
   overflow: hidden;
   margin-top: 32%;
   white-space: nowrap;
-  margin-left: 30px;
 }
 
 
@@ -179,11 +178,35 @@ body {
 .kana.rotated {
   margin-bottom: 30%;
   margin-top: 0;
-  margin-left: 0;
-  margin-right: 30px;
 }
 
 @media (max-width: 600px) {
-  .kana { margin-top: 55%; }
-  .kana.rotated { margin-bottom: 70%; }
+  .kana { display: none; }
+  .kana.rotated { display: none; }
+}
+
+.audio-control {
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  margin: 10px;
+  opacity: 1;
+  background-size: contain;
+  filter: invert(1);
+}
+
+.mute {
+  background: url("/mute.png");
+  background-size: contain;
+  filter: invert(1);
+}
+
+.audio {
+  background: url("/audio.png");
+  background-size: contain;
+  filter: invert(1);
+}
+
+audio {
+  display: none;
 }
