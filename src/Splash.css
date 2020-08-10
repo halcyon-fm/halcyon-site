@@ -1,0 +1,188 @@
+@font-face {
+    font-family: ARCADECLASSIC;
+    src: url(/ARCADECLASSIC.TTF);
+}
+
+@font-face {
+    font-family: YUGOTHIL;
+    src: url(/YUGOTHIL.TTF);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Kosugi', sans-serif;
+  text-rendering: optimizeLegibility;
+  user-select: none;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  overflow: hidden;
+  background: url("/splash-background.png");
+  background-repeat: no-repeat;
+  background-size: 1980px 100vh;
+  width: 100vw;
+  height: 100vh;
+}
+
+.splash-container {
+  display: flex;
+  flex-flow: column;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.top-splash-container {
+  display: flex;
+  width: 100vw;
+  height: 33.3%;
+}
+
+.mid-splash-container {
+  display: flex;
+  width: 100vw;
+  height: 33.3%;
+  justify-content: center;
+  align-items: center;
+}
+
+.bottom-splash-container {
+  display: flex;
+  width: 100vw;
+  height: 33.3%;
+  flex-flow: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.splash-child {
+    display: flex;
+    width: 33.3%;
+    height: 100%;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.splash-logo-container {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  max-width: 700px;
+}
+
+.splash-logo {
+  z-index: 2;
+  position: absolute;
+  background: url("/splash-logo.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 95%;
+  animation: float 6s ease-in-out infinite;
+  width: 100%;
+  height: 100%;
+}
+
+@keyframes float {
+  0% { transform: translatey(0px); }
+  50% { transform: translatey(-20px); }
+  100% { transform: translatey(0px;); }
+}
+
+.splash-logo-shadow {
+  z-index: 1;
+  position: absolute;
+  background: url("/splash-logo-shadow.png");
+  background-repeat: no-repeat;
+  background-position: center 58%;
+  animation: opacity 6s ease-in-out infinite;
+  width: 100%;
+  height: 100%;
+  background-size: 160%;
+}
+
+@keyframes opacity {
+  0% { opacity: 1.0; transform: scale(1) }
+  50% { opacity: 0.8; transform: scale(1.04) }
+  100% { opacity: 1.0; transform: scale(1) }
+}
+
+.splash-loading-text {
+  height: 10%;
+  width: 100%;
+  color: #fff;
+  font-family: ARCADECLASSIC, monospace;
+  text-align: center;
+  font-size: 32px;
+}
+
+.splash-loading-box-container {
+    display: flex;
+    height: 90%;
+    width: 100%;
+    justify-content: center;
+}
+
+.splash-loading-box {
+  min-width: 300px;
+  max-width: 300px;
+  width: 300px;
+  border: 2px solid #fff;
+  height: 20px;
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: min-content;
+}
+
+.splash-loading-doot {
+  width: 16px;
+  height: 16px;
+  background: #fff;
+  justify-self: left;
+  align-self: center;
+  margin: 2px;
+}
+
+.year-logo {
+  font-family: ARCADECLASSIC, monospace;
+  color: #fff;
+  font-size: 35px;
+  text-align: center;
+  width: 100%;
+}
+
+.kana {
+  font-size: 30px;
+  text-align: center;
+  position: absolute;
+  margin-top: 65vh;
+  width: 100%;
+}
+
+
+.pink {
+  color: #e8a9b6;
+}
+
+.purple {
+  color: #483975;
+}
+
+.rotated {
+  transform: rotate(180deg);
+}
+
+.kana.rotated {
+  margin-top: -61vh;
+}
+
+@media (max-width: 965px) {
+  .kana { margin-top: 40vh; margin-left: 20px; }
+  .kana.rotated { margin-top: -45vh; margin-right: 30px; }
+}
