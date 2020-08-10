@@ -3,11 +3,6 @@
     src: url(/ARCADECLASSIC.TTF);
 }
 
-@font-face {
-    font-family: YUGOTHIL;
-    src: url(/YUGOTHIL.TTF);
-}
-
 * {
   margin: 0;
   padding: 0;
@@ -114,7 +109,7 @@ body {
 }
 
 .splash-loading-text {
-  height: 10%;
+  height: 15%;
   width: 100%;
   color: #fff;
   font-family: ARCADECLASSIC, monospace;
@@ -124,7 +119,7 @@ body {
 
 .splash-loading-box-container {
     display: flex;
-    height: 90%;
+    height: 85%;
     width: 100%;
     justify-content: center;
     margin-top: 10px;

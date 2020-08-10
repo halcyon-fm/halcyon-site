@@ -22,11 +22,10 @@ setInterval(() => {
 class Splash extends Component {
   render() {
     return (
-      <div className="splash-container back-row-toggle splat-toggle">
+      <div className="splash-container">
         <div className="top-splash-container">
           <div className="splash-child">
             <img className="rotated" src="/logo.png" width="50"/>
-            <div className="kana pink">ハルシオン</div>
           </div>
           <div className="splash-child"/>
           <div className="splash-child">
@@ -52,12 +51,9 @@ class Splash extends Component {
             </div>
           </div>
           <div className="splash-child">
-            <div className="kana purple rotated">ハルシオン</div>
             <img src="/logo.png" width="50"/>
           </div>
         </div>
-        <div className="rain front-row"></div>
-        <div className="rain back-row"></div>
       </div>
     )
   }
