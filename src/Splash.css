@@ -158,7 +158,7 @@ body {
   text-align: center;
   position: absolute;
   overflow: hidden;
-  margin-top: 610px;
+  margin-top: 32%;
   white-space: nowrap;
   margin-left: 30px;
 }
@@ -177,13 +177,13 @@ body {
 }
 
 .kana.rotated {
-  margin-bottom: 580px;
+  margin-bottom: 30%;
   margin-top: 0;
   margin-left: 0;
   margin-right: 30px;
 }
 
 @media (max-width: 600px) {
-  .kana { margin-top: 250px; }
-  .kana.rotated { margin-bottom: 300px; }
+  .kana { margin-top: 55%; }
+  .kana.rotated { margin-bottom: 70%; }
 }
