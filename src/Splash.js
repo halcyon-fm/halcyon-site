@@ -9,8 +9,8 @@ setInterval(() => {
   let eDoot = document.createElement("div");
 
   if (dootCounter > 14) {
-      e.innerHTML = '';
-      dootCounter = 0;
+    e.innerHTML = '';
+    dootCounter = 0;
   }
 
   eDoot.classList.add("splash-loading-doot");
@@ -74,20 +74,22 @@ ReactDOM.render(
   document.getElementById('root')
 );
 
+let body = document.getElementsByTagName("body")[0];
 let ac = document.getElementsByClassName("audio-control")[0];
 let a = document.getElementsByTagName("audio")[0];
-let val = 0;
-ac.addEventListener("click", ()=> {
-    if (val == 0) {
-        ac.classList.remove("mute");
-        ac.classList.add("audio");
-        val = 1;
-        a.play();
-    }
-    else {
-        ac.classList.remove("audio");
-        ac.classList.add("mute");
-        val = 0;
-        a.pause();
-    }
-});
+
+function audioControl() {
+  console.log("audioControl");
+  if (ac.classList.contains("mute")) {
+    ac.classList.add("audio");
+    ac.classList.remove("mute");
+    a.play();
+  }
+  else {
+    ac.classList.add("mute");
+    ac.classList.remove("audio");
+    a.pause();
+  }
+}
+
+body.addEventListener("click", audioControl);
