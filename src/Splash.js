@@ -57,7 +57,7 @@ class Splash extends Component {
             <img src="/logo.png" width="50"/>
           </div>
         </div>
-        <audio controls>
+        <audio controls loop>
           <source src="website_riff.mp3" type="audio/mp3"/>
         </audio>
       </div>
