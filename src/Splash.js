@@ -26,6 +26,7 @@ class Splash extends Component {
         <div className="top-splash-container">
           <div className="splash-child">
             <img className="rotated" src="/logo.png" width="50"/>
+            <div className="kana pink">ハルシオン</div>
           </div>
           <div className="splash-child"/>
           <div className="splash-child">
@@ -51,6 +52,7 @@ class Splash extends Component {
             </div>
           </div>
           <div className="splash-child">
+            <div className="kana purple rotated">ハルシオン</div>
             <img src="/logo.png" width="50"/>
           </div>
         </div>
