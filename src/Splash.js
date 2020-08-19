@@ -93,3 +93,16 @@ function audioControl() {
 }
 
 body.addEventListener("click", audioControl);
+body.innerHTML += `
+   <!--
+    Xq&socb Ickbt Lc&. 1
+    Ilttub Tuqjx # Kjqx
+    Lc&jhq # Ybijqbsu
+    Cc&qsy&u # Thuqai (Tqjq)
+    &ucjhyn # Uacrco303 (Iytu)
+    Q-uci @ y7 # Qbwu& Dchjq&
+    Dxcbcb # Scbys Iusjycbi
+    Shydd&ybww # Sc&chi
+    RLIIYS # Tyiwkij
+  -->`;
+
