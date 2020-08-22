@@ -12,12 +12,19 @@ import Home from './Home';
 import About from './About';
 import Releases from './Releases';
 import Contact from './Contact';
+import {
+  FacebookSVG,
+  InstagramSVG,
+  SoundCloudSVG,
+  TwitterSVG,
+} from './Svg';
 import Error from './Error';
 
 class Index extends Component {
   render() {
     return (
       <BrowserRouter>
+        <div className="clouds"/>
         <nav>
           <ol>
             <li className="home">
@@ -43,6 +50,17 @@ class Index extends Component {
           <Route component={Error}/>
         </Switch>
       </div>
+      <footer>
+        <div className="social-media-bar">
+          <TwitterSVG/>
+          <InstagramSVG/>
+          <FacebookSVG/>
+          <SoundCloudSVG/>
+        </div>
+        <div className="copyright-text">
+          Copyright © 2020 Halcyon LV | All rights reserverd
+        </div>
+      </footer>
       </BrowserRouter>
     )
   }

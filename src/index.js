@@ -1,13 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-/* import Index from './Index'; */
-import Splash from './Splash';
+import App from './App';
+/* import Splash from './Splash'; */
 
 ReactDOM.render(
   <React.StrictMode>
-    { /* <Index/> */ }
-    <Splash/>
+    <App/>
+    { /* <Splash/> */ }
   </React.StrictMode>,
   document.getElementById('root')
 );
