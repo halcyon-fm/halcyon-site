@@ -1,6 +1,27 @@
 import React, { Component } from 'react';
 
 import "./Contact.css";
+import "./Loading.css";
+
+let dootCounter = 0;
+setInterval(() => {
+  let e = document.getElementsByClassName("splash-loading-box")[0];
+  if (e) {
+    let eDoot = document.createElement("div");
+
+    if (dootCounter > 14) {
+      e.innerHTML = '';
+      dootCounter = 0;
+    }
+
+    eDoot.classList.add("splash-loading-doot");
+    e.appendChild(eDoot);
+    dootCounter++;
+  }
+
+}, 300);
+
+
 
 class BaseFormInput extends Component {
   constructor(props) {
@@ -30,7 +51,7 @@ class TextFormInput extends BaseFormInput {
 class MessageFormInput extends BaseFormInput {
   constructor(props) {
     super(props);
-    this.state = {value: "Type your message here"};
+    this.state = {value: ""};
   }
 
   render() {
@@ -38,7 +59,7 @@ class MessageFormInput extends BaseFormInput {
       <label>
         <p>Message</p>
         <div className="input-bg">
-          <textarea value={this.state.value} onChange={this.handleChange}/>
+          <textarea value={this.state.value} onChange={this.handleChange} placeholder="Type your message here"/>
         </div>
       </label>
     )
@@ -85,7 +106,6 @@ class Contact extends Component {
   }
 
   fuckTheDOM() {
-      console.log("yeah");
     let submit = document.getElementById("submit");
     if (!submit) { return; }
 
@@ -101,24 +121,75 @@ class Contact extends Component {
     }
   }
 
-  handleSubmit(e) {
-    alert("Submit!");
+  async handleSubmit(e) {
     e.preventDefault();
+    const loading = document.getElementsByClassName("loading")[0];
+    loading.classList = "loading show";
+    this.refs.submit.disabled = true;
+    this.refs.submit.value = "Sending...";
+
+    const left = document.getElementsByClassName("contact-column-left")[0];
+    const right = document.getElementsByClassName("contact-column-right")[0];
+    left.classList = "contact-column-left disable";
+    right.classList = "contact-column-right disable";
+
+    const data = {
+      subject: this.refs.subject.state.value,
+      name: this.refs.name.state.value,
+      email: this.refs.email.state.value,
+      message: this.refs.message.state.value,
+    };
+
+    const request = {
+      method: "POST",
+      headers: { "Content-Type": "application/json; charset=UTF-8" },
+      body: JSON.stringify(data),
+    };
+
+    const sleej = delay => new Promise(resolve => setTimeout(resolve, delay));
+
+    await sleej(1000);
+    const response = await fetch("/contact", request);
+    if (response.status == 200) {
+      this.refs.submit.value = "Sent!";
+      this.refs.submit.disabled = false;
+
+      left.classList = "contact-column-left enable";
+      right.classList = "contact-column-right enable";
+      loading.classList = "loading";
+    }
+    else {
+      const body = await response.json()
+      this.refs.submit.value = "Could not send, please try again later"
+      this.refs.submit.disabled = false;
+
+      left.classList = "contact-column-left enable";
+      right.classList = "contact-column-right enable";
+      loading.classList = "loading";
+    }
   }
 
   render() {
     return (
       <form className="contact-contain" onSubmit={this.handleSubmit}>
+        <div className="loading">
+          <div className="splash-loading-text">
+            SENDING
+          </div>
+          <div className="splash-loading-box-container">
+            <div className="splash-loading-box"/>
+          </div>
+        </div>
         <div className="contact-column-left">
-          <SelectFormInput name="subject"/>
-          <TextFormInput name="name"/>
-          <TextFormInput name="email"/>
+          <SelectFormInput ref="subject" name="subject"/>
+          <TextFormInput ref="name" name="name"/>
+          <TextFormInput ref="email" name="email"/>
           <div className="input-bg">
-            <input id="submit" type="submit" value="Submit"/>
+            <input ref="submit" id="submit" type="submit" value="Submit"/>
           </div>
         </div>
         <div className="contact-column-right">
-          <MessageFormInput name="message"/>
+          <MessageFormInput ref="message" name="message"/>
         </div>
       </form>
     )

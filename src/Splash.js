@@ -79,7 +79,6 @@ let ac = document.getElementsByClassName("audio-control")[0];
 let a = document.getElementsByTagName("audio")[0];
 
 function audioControl() {
-  console.log("audioControl");
   if (ac.classList.contains("mute")) {
     ac.classList.add("audio");
     ac.classList.remove("mute");

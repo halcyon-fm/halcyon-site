@@ -14,7 +14,6 @@ class Releases extends Component {
 
   handleReleaseRainbow(img, start, end) {
     let offset = window.pageYOffset;
-    console.log(offset);
     if (img) {
       if (offset > start && offset < end) {
          img.classList = "release show-rainbow";

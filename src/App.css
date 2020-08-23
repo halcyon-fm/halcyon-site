@@ -157,3 +157,23 @@ nav > ol > li > a:link {
     opacity: 1;
   }
 }
+
+.footer-social {
+  transition: fill 1s;
+}
+
+.twitter-social:hover {
+  fill: #ff7bb5;
+}
+
+.instagram-social:hover {
+  fill: #ffbacc;
+}
+
+.facebook-social:hover {
+  fill: #ffc175;
+}
+
+.soundcloud-social:hover {
+  fill: #fff074;
+}
