@@ -25,8 +25,8 @@ class Releases extends Component {
   }
 
   componentDidMount() {
-    let content = document.getElementById("root");
-    content.classList = "ios";
+    let root = document.getElementById("root");
+    root.classList = "ios";
 
     let content = document.getElementsByClassName("content")[0];
     content.classList = "content contact";
