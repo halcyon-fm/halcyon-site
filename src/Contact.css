@@ -60,9 +60,10 @@ input:focus, select:focus, textarea:focus, button:focus {
 }
 
 @media (max-width: 920px) {
-  .contact-contain { grid-template-columns: 100%; margin-top: 50px; }
+  .contact-contain { grid-template-columns: 100%; }
   .contact-column-left { height: auto; padding: 0px 20px; }
   .contact-column-right { height: auto; row-gap: 30px; padding: 0px 20px; }
   .content.contact { height: auto; }
   footer.contact { margin-top: 50px; }
+  textarea { height: 300px; }
 } 
