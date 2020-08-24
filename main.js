@@ -51,7 +51,7 @@ app.post("/contact", [
 
     let emailDetail = {
       from: "",
-      to: "web@halcyon.fm",
+      to: to,
       subject: subject,
       text: message,
     }
