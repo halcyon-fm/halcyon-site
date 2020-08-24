@@ -183,6 +183,11 @@ class Contact extends Component {
             <div className="splash-loading-box"/>
           </div>
         </div>
+        <div className="response">
+          <div className="input-bg">
+            <div className="message"/>
+          </div>
+        </div>
         <div className="contact-column-left">
           <SelectFormInput ref="subject" name="subject"/>
           <TextFormInput ref="name" name="name"/>
