@@ -4,6 +4,9 @@ import "./Home.css";
 
 class Home extends Component {
   componentDidMount() {
+    let root = document.getElementById("root");
+    root.classList = "";
+
     let content = document.getElementsByClassName("content")[0];
     content.classList = "content";
 
