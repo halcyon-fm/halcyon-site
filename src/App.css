@@ -39,7 +39,6 @@ footer {
 nav > ol {
   list-style-type: none;
   color: #fff;
-  max-width: 800px;
 }
 
 nav > ol > li {
