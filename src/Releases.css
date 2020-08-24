@@ -39,7 +39,8 @@
 }
 
 @media (max-width: 920px) {
-  .releases-container { grid-template-columns: 100%;  grid-row-gap: 50px; margin: 0px }
+  .content.contact { margin: 50px 10px 0 10px; }
+  .releases-container { grid-template-columns: 100%;  grid-row-gap: 50px; margin: 0; }
   .release { max-width: 100%; max-height: 100%; }
 } 
 
