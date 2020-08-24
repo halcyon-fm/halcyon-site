@@ -13,7 +13,7 @@ html {
 body {
   margin: 0;
   font-family: sans-serif;
-  background: url("/background.jpg");
+  background: url("/background.png");
   background-attachment: fixed;
   background-position: bottom;
   background-size: cover;
@@ -148,7 +148,7 @@ nav > ol > li > a:link {
 }
 
 @media (max-width: 600px) {
-  nav > ol > li { margin: 0 5vw; }
+  nav > ol > li { margin: 0 5vw; font-size: 100%; }
   .clouds { background-position: center 130%; }
 }
 
