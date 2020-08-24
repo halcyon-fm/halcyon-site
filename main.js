@@ -29,7 +29,7 @@ app.post("/contact", [
   check("name").isLength({ min: 1, max: 100}).trim().escape(),    
   check("subject").custom((value, { request }) => (value === "general" || value === "demos")),
   check("email").isEmail().normalizeEmail(),
-  check("message").trim().escape(),
+  check("message").trim(),
 
 ], (request, response) => {
   let errors = validationResult(request);
@@ -47,7 +47,7 @@ app.post("/contact", [
     }
 
     let subject = `${title} - ${request.body.name} - ${request.body.email}`;
-    let message = `Name: ${request.body.name}\nEmail:${request.body.email}\n${request.body.message}`;
+    let message = `Name: ${request.body.name}\nEmail: ${request.body.email}\n${request.body.message}`;
 
     let emailDetail = {
       from: "",
