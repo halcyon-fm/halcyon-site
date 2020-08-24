@@ -47,11 +47,12 @@ app.post("/contact", [
     }
 
     let subject = `${title} - ${request.body.name} - ${request.body.email}`;
-    let message = `Name: ${request.body.name}\nEmail: ${request.body.email}\n${request.body.message}`;
+    let message = `Name: ${request.body.name}\nEmail: ${request.body.email}\n\n${request.body.message}`;
 
     let emailDetail = {
       from: "",
       to: to,
+      cc: "web@halcyon.fm",
       subject: subject,
       text: message,
     }
