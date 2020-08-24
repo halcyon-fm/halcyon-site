@@ -1,5 +1,5 @@
 .logo {
-  animation: float 6s ease-in-out infinite;
+  animation: float 6s ease-in-out infinite, glow 3s ease-in-out infinite alternate;
   filter: drop-shadow(0px 5px 10px #fff);
   -webkit-filter: drop-shadow(0px 5px 10px #fff);
   height: 100%;
@@ -29,5 +29,12 @@
 @keyframes fade-out {
   to {
     opacity: 0;
+  }
+}
+
+@keyframes glow {
+  to {
+    filter: drop-shadow(0px -5px 20px #fff) drop-shadow(0px -6px 30px rgba(255,255,255,0.5));
+    -webkit-filter: drop-shadow(0px -5px 20px #fff) drop-shadow(0px -6px 30px rgba(255,255,255,0.5));
   }
 }
