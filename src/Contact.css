@@ -64,6 +64,5 @@ input:focus, select:focus, textarea:focus, button:focus {
   .contact-column-left { height: auto; padding: 0px 20px; }
   .contact-column-right { height: auto; row-gap: 30px; padding: 0px 20px; }
   .content.contact { height: auto; }
-  footer.contact { margin-top: 50px; }
   textarea { height: 300px; }
 } 
