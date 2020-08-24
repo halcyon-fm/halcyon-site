@@ -7,7 +7,7 @@ import './About.css';
 class About extends Component {
   componentDidMount() {
     let root = document.getElementById("root");
-    root.classList = "";
+    root.classList = "ios";
 
     let content = document.getElementsByClassName("content")[0];
     content.classList = "content";
