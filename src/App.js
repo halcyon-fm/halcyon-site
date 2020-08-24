@@ -22,9 +22,30 @@ import {
 import Error from './Error';
 
 class App extends Component {
+  componentDidMount() {
+    let ac = document.getElementsByClassName("audio-control")[0];
+    let a = document.getElementsByTagName("audio")[0];
+    function audioControl() {
+      if (ac.classList.contains("mute")) {
+        ac.classList.add("audio");
+        ac.classList.remove("mute");
+        a.play();
+      }
+      else {
+        ac.classList.add("mute");
+        ac.classList.remove("audio");
+        a.pause();
+      }
+    }
+    ac.addEventListener("click", audioControl);
+  }
+
   render() {
     return (
       <BrowserRouter>
+        <div className="audio-contain">
+          <div className="audio-control mute"/>
+        </div>
         <Stars/>
         <div className="clouds" key="clouds"/>
         <nav>

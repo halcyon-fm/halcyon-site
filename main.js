@@ -65,7 +65,10 @@ app.post("/contact", [
     });
 
     transporter.sendMail(emailDetail, function(error, info) {
-      if (error) { response.status(500).send(error).end(); }
+      if (error) {
+        let serverErrors = { errors: [{msg: error}] };
+        response.status(500).send(serverErrors).end();
+      }
       else { response.status(200).end(); }
       transporter.close();
     });

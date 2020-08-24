@@ -92,6 +92,7 @@ class Contact extends Component {
   constructor(props) {
     super(props);
     this.handleSubmit = this.handleSubmit.bind(this);
+    this.messageFade = this.messageFade.bind(this);
   }
 
   componentDidMount() {
@@ -154,27 +155,46 @@ class Contact extends Component {
     await sleej(1000);
     const response = await fetch("/contact", request);
     if (response.status == 200) {
-      this.refs.submit.value = "Sent!";
-      this.refs.submit.disabled = false;
+      const message = document.getElementsByClassName("message-message")[0];
+      message.innerHTML = "Your message has been sent, we'll get back to you shortly!~";
 
-      left.classList = "contact-column-left enable";
-      right.classList = "contact-column-right enable";
-      loading.classList = "loading";
+      const resp = document.getElementsByClassName("response")[0];
+      resp.classList = "response enable";
+
+      this.refs.submit.value = "Sent!";
     }
     else {
       const body = await response.json()
-      this.refs.submit.value = "Could not send, please try again later"
-      this.refs.submit.disabled = false;
 
-      left.classList = "contact-column-left enable";
-      right.classList = "contact-column-right enable";
-      loading.classList = "loading";
+      const message = document.getElementsByClassName("message-message")[0];
+      message.classList = "message-message enable";
+      message.innerHTML = `Your message could not be sent, please try again
+        <br>
+        <div class='error'>${body.errors[0].msg}</div>`;
+
+      const resp = document.getElementsByClassName("response")[0];
+      resp.classList = "response enable";
+
+      this.refs.submit.value = "Submit";
     }
+  }
+
+  messageFade(e) {
+    e.preventDefault();
+    const resp = document.getElementsByClassName("response")[0];
+    resp.classList = "response";
+    this.refs.submit.disabled = false;
+    const left = document.getElementsByClassName("contact-column-left")[0];
+    const right = document.getElementsByClassName("contact-column-right")[0];
+    const loading = document.getElementsByClassName("loading")[0];
+    left.classList = "contact-column-left enable";
+    right.classList = "contact-column-right enable";
+    loading.classList = "loading";
   }
 
   render() {
     return (
-      <form className="contact-contain" onSubmit={this.handleSubmit}>
+      <form className="contact-contain">
         <div className="loading">
           <div className="splash-loading-text">
             SENDING
@@ -184,8 +204,13 @@ class Contact extends Component {
           </div>
         </div>
         <div className="response">
-          <div className="input-bg">
-            <div className="message"/>
+          <div className="message-contain">
+            <div className="input-bg">
+              <div className="message">
+              <div className="message-message"/>
+              <button type="button" onClick={this.messageFade} className="message-button">OK</button>
+              </div>
+            </div>
           </div>
         </div>
         <div className="contact-column-left">
@@ -193,7 +218,7 @@ class Contact extends Component {
           <TextFormInput ref="name" name="name"/>
           <TextFormInput ref="email" name="email"/>
           <div className="input-bg">
-            <input ref="submit" id="submit" type="submit" value="Submit"/>
+            <input onClick={this.handleSubmit} ref="submit" id="submit" type="submit" value="Submit"/>
           </div>
         </div>
         <div className="contact-column-right">
