@@ -49,14 +49,6 @@ nav > ol > li {
   font-size: 21px;
 }
 
-nav > ol > li:first-child {
-    margin-left: 0;
-}
-
-nav > ol > li:last-child {
-    margin-right: 0;
-}
-
 nav > ol > li > a:hover {
   text-shadow: 0 0 10px #fff, 0 0 1px rgba(255, 255, 255, 0.3);
   transition: text-shadow 0.3s ease-in;
@@ -163,20 +155,8 @@ nav > ol > li > a:link {
   transition: fill 1s;
 }
 
-.twitter-social:hover {
+.footer-social:hover {
   fill: #ff7bb5;
-}
-
-.instagram-social:hover {
-  fill: #ffbacc;
-}
-
-.facebook-social:hover {
-  fill: #ffc175;
-}
-
-.soundcloud-social:hover {
-  fill: #fff074;
 }
 
 audio {

@@ -1,7 +1,7 @@
 const LINKS = {
   "twitter": "https://twitter.com/HalcyonLV",
   "facebook": "https://facebook.com/LvHalcyon",
-  "soundcloud": "https://twitter.com/halcyonlv",
+  "soundcloud": "https://soundcloud.com/halcyonlv",
   "instagram": "https://instagram.com/halcyonlv",
 }
 
