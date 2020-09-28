@@ -16,7 +16,7 @@ const RELEASES = [
   new Release("VOLTRA - INSTANCE", "2.jpeg", "https://go.halcyon.fm/instance"),
   new Release("HALCYON SOUND VOL 1", "3.jpeg", "https://go.halcyon.fm/hsv1"),
   new Release("AWEMINUS - PACMAN BULLSHIT", "4.jpeg", "https://go.halcyon.fm/pacmanbs"),
-  new Release("???", "5.jpeg", ""),
+  new Release("BVSSIC - ELYSIUM", "5.jpeg", "https://go.halcyon.fm/elysium"),
   new Release("???", "6.jpeg", ""),
 ]
 
