@@ -17,7 +17,7 @@ const RELEASES = [
   new Release("HALCYON SOUND VOL 1", "3.jpeg", "https://go.halcyon.fm/hsv1"),
   new Release("AWEMINUS - PACMAN BULLSHIT", "4.jpeg", "https://go.halcyon.fm/pacmanbs"),
   new Release("BVSSIC - ELYSIUM", "5.jpeg", "https://go.halcyon.fm/elysium"),
-  new Release("???", "6.jpeg", ""),
+  new Release("OOLACILE - PRCVR", "6.jpeg", "https://go.halcyon.fm/prcvr"),
 ]
 
 const SCROLL_OFFSETS = [
