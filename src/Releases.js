@@ -29,7 +29,7 @@ class Releases extends Component {
     root.classList = "ios";
 
     let content = document.getElementsByClassName("content")[0];
-    content.classList = "content contact";
+    content.classList = "content releases";
                                                                  
     let footer = document.getElementsByTagName("footer")[0];
     footer.classList = "contact";

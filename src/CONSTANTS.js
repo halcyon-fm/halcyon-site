@@ -12,6 +12,9 @@ function Release(name, path, link) {
 }
 
 const RELEASES = [
+  new Release("OOLACILE & AWEMINUS - MIND SCANNER", "7.jpeg", "https://go.halcyon.fm/mndscnr"),
+  new Release("OOLACILE - CLOUD MIND", "8.png", "https://go.halcyon.fm/cloudmnd"),
+  new Release("PRCVR PT 1", "9.png", "https://go.halcyon.fm/prcvrpt1"),
   new Release("SVDDEN DEATH - UTAH", "1.jpeg", "https://go.halcyon.fm/utah"),
   new Release("VOLTRA - INSTANCE", "2.jpeg", "https://go.halcyon.fm/instance"),
   new Release("HALCYON SOUND VOL 1", "3.jpeg", "https://go.halcyon.fm/hsv1"),

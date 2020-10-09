@@ -1,3 +1,9 @@
+.content.releases {
+    height: auto;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
 .release {
   max-width: 350px;
   max-height: 350px;
@@ -29,13 +35,14 @@
 .releases-container {
    display: grid;
    width: 100%;
-   height: 100%;
    grid-template-columns: 33.3% 33.3% 33.3%;
    justify-content: center;
    align-items: center;
    margin: 10px 250px 0px 250px;
    opacity: 0;
    animation: fade-in 3s ease-in forwards, float 6s ease-in-out infinite alternate;
+   grid-row-gap: 50px;
+   grid-column-gap: 50px;
 }
 
 @media (max-width: 920px) {
