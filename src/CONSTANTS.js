@@ -12,15 +12,18 @@ function Release(name, path, link) {
 }
 
 const RELEASES = [
-  new Release("OOLACILE & AWEMINUS - MIND SCANNER", "7.jpeg", "https://go.halcyon.fm/mndscnr"),
-  new Release("OOLACILE - CLOUD MIND", "8.png", "https://go.halcyon.fm/cloudmnd"),
+  new Release("AUTOMHATE - EGO STREAM", "10.png", "https://go.halcyon.fm/egostream"),
+  new Release("AUTOMHATE - TONAL RIDDIM", "11.png", ""),
+  new Release("???", "12.jpeg", ""),
   new Release("PRCVR PT 1", "9.png", "https://go.halcyon.fm/prcvrpt1"),
-  new Release("SVDDEN DEATH - UTAH", "1.jpeg", "https://go.halcyon.fm/utah"),
-  new Release("VOLTRA - INSTANCE", "2.jpeg", "https://go.halcyon.fm/instance"),
-  new Release("HALCYON SOUND VOL 1", "3.jpeg", "https://go.halcyon.fm/hsv1"),
+  new Release("OOLACILE - CLOUD MIND", "8.png", "https://go.halcyon.fm/cloudmnd"),
+  new Release("OOLACILE & AWEMINUS - MIND SCANNER", "7.jpeg", "https://go.halcyon.fm/mndscnr"),
+  new Release("OOLACILE - PRCVR", "6.jpeg", "https://go.halcyon.fm/prcvr"),
   new Release("AWEMINUS - PACMAN BULLSHIT", "4.jpeg", "https://go.halcyon.fm/pacmanbs"),
   new Release("BVSSIC - ELYSIUM", "5.jpeg", "https://go.halcyon.fm/elysium"),
-  new Release("OOLACILE - PRCVR", "6.jpeg", "https://go.halcyon.fm/prcvr"),
+  new Release("HALCYON SOUND VOL 1", "3.jpeg", "https://go.halcyon.fm/hsv1"),
+  new Release("VOLTRA - INSTANCE", "2.jpeg", "https://go.halcyon.fm/instance"),
+  new Release("SVDDEN DEATH - UTAH", "1.jpeg", "https://go.halcyon.fm/utah"),
 ]
 
 const SCROLL_OFFSETS = [
