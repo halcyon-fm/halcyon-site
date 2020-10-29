@@ -12,9 +12,10 @@ function Release(name, path, link) {
 }
 
 const RELEASES = [
+  new Release("KOZMOZ - DYSTOPIA", "13.jpeg", "https://go.halcyon.fm/dystpakoz"),
+  new Release("OOLACILE & KOZMOZ - AUTONETIC", "12.jpeg", "https://go.halcyon.fm/autonetic"),
   new Release("AUTOMHATE - EGO STREAM", "10.png", "https://go.halcyon.fm/egostream"),
-  new Release("AUTOMHATE - TONAL RIDDIM", "11.png", ""),
-  new Release("???", "12.jpeg", ""),
+  new Release("AUTOMHATE - TONAL RIDDIM", "11.png", "https://go.halcyon.fm/tnlrdm"),
   new Release("PRCVR PT 1", "9.png", "https://go.halcyon.fm/prcvrpt1"),
   new Release("OOLACILE - CLOUD MIND", "8.png", "https://go.halcyon.fm/cloudmnd"),
   new Release("OOLACILE & AWEMINUS - MIND SCANNER", "7.jpeg", "https://go.halcyon.fm/mndscnr"),
