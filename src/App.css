@@ -139,7 +139,7 @@ nav > ol > li > a:link {
 }
 
 @media (max-width: 600px) {
-  nav > ol > li { margin: 0 5vw; font-size: 100%; }
+  nav > ol > li { margin: 0 5vw; font-size: 80%; }
   .clouds { background-position: center 130%; }
   .content { margin: 50px 10px 50px 10px; }
 }

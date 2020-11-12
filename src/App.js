@@ -62,6 +62,9 @@ class App extends Component {
             <li className="contact">
               <NavLink to="/contact">CONTACT</NavLink>
             </li>
+            <li className="merch">
+              <a href="http://spaceyacht.net/halcyon">MERCH</a>
+            </li>
           </ol>
         </nav>
       <div className="content">
