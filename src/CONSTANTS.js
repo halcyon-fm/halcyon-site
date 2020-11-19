@@ -12,6 +12,7 @@ function Release(name, path, link) {
 }
 
 const RELEASES = [
+  new Release("PHONON - EMME", "14.png", "https://go.halcyon.fm/emme"),
   new Release("KOZMOZ - DYSTOPIA", "13.jpeg", "https://go.halcyon.fm/dystpakoz"),
   new Release("OOLACILE & KOZMOZ - AUTONETIC", "12.jpeg", "https://go.halcyon.fm/autonetic"),
   new Release("AUTOMHATE - EGO STREAM", "10.png", "https://go.halcyon.fm/egostream"),
