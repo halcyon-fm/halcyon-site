@@ -12,6 +12,12 @@ function Release(name, path, link) {
 }
 
 const RELEASES = [
+  new Release("CANNA - EXTRAGALACTIC", "24.png", "https://go.halcyon.fm/extragalactic"),
+  new Release("CANNA - CELESTIA", "23.png", "https://go.halcyon.fm/celestia"),
+  new Release("CANNA - UNBOUND", "22.png", "https://go.halcyon.fm/unbound"),
+  new Release("OCTANE - HEXANE", "21.png", "https://go.halcyon.fm/hexane"),
+  new Release("OCTANE - CYBER FUNK", "20.png", "https://go.halcyon.fm/cybrfnk"),
+  new Release("OCTANE - NANO PRISMA", "19.png", "https://go.halcyon.fm/nanoprisma"),
   new Release("OCTANE - DIGITAL ION", "18.png", "https://go.halcyon.fm/digiion"),
   new Release("NUUSHI - FAIRYTALE", "16.png", "https://go.halcyon.fm/fairytale"),
   new Release("NUUSHI - TSUBAKI", "17.jpeg", "https://go.halcyon.fm/tsubaki"),
