@@ -12,10 +12,12 @@ function Release(name, path, link) {
 }
 
 const RELEASES = [
-  new Release("OOLACILE - HOEPLE555", "28.jpeg", "https://go.halcyon.fm/hopele555"),
-  new Release("QWATSON - RIDE BACK HOME", "27.jpeg", "https://go.halcyon.fm/ride_back_home"),
-  new Release("AWEMINUS - SEA SHANTY", "26.jpeg", "https://go.halcyon.fm/sea_shanty"),
+  new Release("WAVEFRONT", "27.png", "https://go.halcyon.fm/wavefront"),
+  new Release("VAYRE - SPECTRAMORPH", "26.png", "https://go.halcyon.fm/spectramorph"),
   new Release("ENCHANTED VOL. 1", "25.png", "https://go.halcyon.fm/enchanted"),
+  new Release("AWEMINUS - SEA SHANTY", "26.jpeg", "https://go.halcyon.fm/sea_shanty"),
+  new Release("QWATSON - RIDE BACK HOME", "27.jpeg", "https://go.halcyon.fm/ride_back_home"),
+  new Release("OOLACILE - HOEPLE555", "28.jpeg", "https://go.halcyon.fm/hopele555"),
   new Release("CANNA - EXTRAGALACTIC", "24.png", "https://go.halcyon.fm/extragalactic"),
   new Release("CANNA - CELESTIA", "23.png", "https://go.halcyon.fm/celestia"),
   new Release("CANNA - UNBOUND", "22.png", "https://go.halcyon.fm/unbound"),
