@@ -12,6 +12,8 @@ function Release(name, path, link) {
 }
 
 const RELEASES = [
+  new Release("TRINERGY - STARFALL", "29.png", "https://go.halcyon.fm/starfall"),
+  new Release("TRINERGY - ROMANTIC STORY", "28.png", "https://go.halcyon.fm/romanticstory"),
   new Release("WAVEFRONT", "27.png", "https://go.halcyon.fm/wavefront"),
   new Release("VAYRE - SPECTRAMORPH", "26.png", "https://go.halcyon.fm/spectramorph"),
   new Release("ENCHANTED VOL. 1", "25.png", "https://go.halcyon.fm/enchanted"),
