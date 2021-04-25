@@ -60,7 +60,7 @@ app.post("/contact", [
     let transporter = nodemailer.createTransport({
       service: "gmail",
       auth: {
-        user: "web@halcyon.fm",
+        user: "zyshara@halcyon.fm",
         pass: "izli ggwq gddl clye"
       },
     });
