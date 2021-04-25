@@ -52,7 +52,7 @@ app.post("/contact", [
     let emailDetail = {
       from: "",
       to: to,
-      cc: "web@halcyon.fm",
+      cc: "zyshara@halcyon.fm",
       subject: subject,
       text: message,
     }
