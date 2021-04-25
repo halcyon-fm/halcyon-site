@@ -61,11 +61,12 @@ app.post("/contact", [
       service: "gmail",
       auth: {
         user: "zyshara@halcyon.fm",
-        pass: "izli ggwq gddl clye"
+        pass: "xviwsxnpfwtlmtyn"
       },
     });
 
     transporter.sendMail(emailDetail, function(error, info) {
+      console.log(error);
       if (error) {
         let serverErrors = { errors: [{msg: error}] };
         response.status(500).send(serverErrors).end();
