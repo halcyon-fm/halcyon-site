@@ -12,15 +12,21 @@ class Releases extends Component {
     this.scrollListener = null;
   }
 
-  handleReleaseRainbow(img, start, end) {
-    let offset = window.pageYOffset;
-    if (img) {
-      if (offset > start && offset < end) {
-         img.classList = "release show-rainbow";
-      }
-      else {
-         img.classList = "release";
-      }
+  handleReleaseRainbow(release) {
+    const r = document.getElementsByClassName(release.img)[0];
+    if (!r) { return; }
+
+    let rect = r.getBoundingClientRect();
+    let page = document.getElementById("root").getBoundingClientRect();
+    
+    let pageCenter = (-1 * page.y) + (window.innerHeight / 2);
+    let rectCenter = (rect.y) + (rect.height / 2) + (-1 * page.y);
+
+    if (pageCenter >= rectCenter - 250 && pageCenter <= rectCenter + 250) {
+        r.classList = `release ${release.img} show-rainbow`;
+    }
+    else {
+        r.classList = `release ${release.img}`;
     }
   }
 
@@ -49,9 +55,8 @@ class Releases extends Component {
       const img = document.getElementsByClassName("release")[0];
       img.classList = "release show-rainbow";
       this.scrollListener = window.addEventListener("scroll", () => {
-        for (let i = 0; i < RELEASES.length; i++) {
-          const img = document.getElementsByClassName("release")[i];
-          this.handleReleaseRainbow(img, SCROLL_OFFSETS[i]["min"], SCROLL_OFFSETS[i]["max"]);
+        for (const release of RELEASES) {
+          this.handleReleaseRainbow(release);
         }
       });
     }
@@ -61,7 +66,7 @@ class Releases extends Component {
     let releases = [];
     for (const release of RELEASES) {
       let divCL = "shine-contain";
-      let imgCL = "release";
+      let imgCL = `release ${release.img}`;
       if (release.name === "???") {
         divCL = "shine-contain unreleased";
         imgCL = "release unreleased";
