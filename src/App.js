@@ -53,24 +53,17 @@ class App extends Component {
             <li className="home">
               <NavLink exact to="/">HOME</NavLink>
             </li>
-            <li className="about">
-              <NavLink to="/about">ABOUT</NavLink>
-            </li>
             <li className="releases">
               <NavLink to="/releases">RELEASES</NavLink>
             </li>
             <li className="contact">
               <NavLink to="/contact">CONTACT</NavLink>
             </li>
-            <li className="merch">
-              <a href="http://spaceyacht.net/halcyon">MERCH</a>
-            </li>
           </ol>
         </nav>
       <div className="content">
         <Switch>
           <Route exact path="/" component={Home}/>
-          <Route path="/about" component={About}/>
           <Route path="/releases" component={Releases}/>
           <Route path="/contact" component={Contact}/>
           <Route component={Error}/>
@@ -84,7 +77,7 @@ class App extends Component {
           <SoundCloudSVG/>
         </div>
         <div className="copyright-text">
-          Copyright © 2020 Halcyon LV | All rights reserverd
+          Copyright © 2020 Halcyon LV | All rights reserved
         </div>
       </footer>
       </BrowserRouter>
