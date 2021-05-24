@@ -13,7 +13,6 @@ function Release(name, path, link) {
 }
 
 const RELEASES = [
-const RELEASES = [
   new Release("DDD - aetherplane", "aetherplane.png", "https://go.halcyon.fm/aether_plane"),
   new Release("DDD - glassheart", "glassheart.png", "https://go.halcyon.fm/glass_heart"),
   new Release("I7 - SEVEN", "seven.png", "https://go.halcyon.fm/seven"),
