@@ -13,8 +13,12 @@ function Release(name, path, link) {
 }
 
 const RELEASES = [
-  new Release("DDD - aetherplane", "aetherplane.png", "https://go.halcyon.fm/aether_plane"),
-  new Release("DDD - glassheart", "glassheart.png", "https://go.halcyon.fm/glass_heart"),
+  new Release("TRINERGY - MISS YA", "missya.png", "https://go.halcyon.fm/missya"),
+  new Release("TRINERGY - SHARDS OF THE FUTURE", "shardsofthefuture.png", "https://go.halcyon.fm/sotf"),
+  new Release("QWATSON - LEAVE ME ALONE", "leavemealone.png", "https://go.halcyon.fm/leavemealone"),
+  new Release("QWATSON - REALIZE EP", "realizeep.png", "https://go.halcyon.fm/realize"),
+  new Release("DDD - AETHERPLANE", "aetherplane.png", "https://go.halcyon.fm/aether_plane"),
+  new Release("DDD - GLASSHEART", "glassheart.png", "https://go.halcyon.fm/glass_heart"),
   new Release("I7 - SEVEN", "seven.png", "https://go.halcyon.fm/seven"),
   new Release("I7 - BORED", "bored.png", "https://go.halcyon.fm/bored"),
   new Release("I7 - VII", "30.png", "https://go.halcyon.fm/vii"),
