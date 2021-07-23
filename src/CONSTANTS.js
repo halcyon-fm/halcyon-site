@@ -13,6 +13,8 @@ function Release(name, path, link) {
 }
 
 const RELEASES = [
+  new Release("ELIDERP EP", "ELIDERPEP.png", "https://go.halcyon.fm/azimuth"),
+  new Release("PETRIFY", "PETRIFY.png", "https://go.halcyon.fm/petrify"),
   new Release("TRINERGY - MISS YA", "missya.png", "https://go.halcyon.fm/missya"),
   new Release("TRINERGY - SHARDS OF THE FUTURE", "shardsofthefuture.png", "https://go.halcyon.fm/sotf"),
   new Release("QWATSON - LEAVE ME ALONE", "leavemealone.png", "https://go.halcyon.fm/leavemealone"),
