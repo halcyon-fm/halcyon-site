@@ -13,6 +13,9 @@ function Release(name, path, link) {
 }
 
 const RELEASES = [
+  new Release("CEREBRUM", "CEREBRUM.jpg", "https://go.halcyon.fm/cerebrum"),
+  new Release("BVSSIC - SUPERVISION", "SUPERVISION.png", "https://go.halcyon.fm/supervision"),
+  new Release("VAYRE - MANDA", "MANDA.png", "https://go.halcyon.fm/manda"),
   new Release("OOLACILE - MICROHARMONY", "MICROHARMONY.jpg", "https://go.halcyon.fm/microharmony"),
   new Release("OOLACILE - ICE", "ICE.jpg", "https://go.halcyon.fm/ice"),
   new Release("ELIDERP EP", "ELIDERPEP.png", "https://go.halcyon.fm/azimuth"),
