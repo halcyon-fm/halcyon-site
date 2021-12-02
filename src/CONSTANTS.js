@@ -13,6 +13,9 @@ function Release(name, path, link) {
 }
 
 const RELEASES = [
+  new Release("SUPER POSITION", "superposition.png", "https://go.halcyon.fm/superposition"),
+  new Release("ANCIENT", "ancient.png", "https://go.halcyon.fm/ancient"),
+  new Release("EXPLORATIVE SCENERY - STASYS", "explorative_scenery.png", "https://go.halcyon.fm/explrtivescnry"),
   new Release("CEREBRUM", "CEREBRUM.jpg", "https://go.halcyon.fm/cerebrum"),
   new Release("BVSSIC - SUPERVISION", "SUPERVISION.png", "https://go.halcyon.fm/supervision"),
   new Release("VAYRE - MANDA", "MANDA.png", "https://go.halcyon.fm/manda"),
