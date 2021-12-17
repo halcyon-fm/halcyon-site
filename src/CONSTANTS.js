@@ -13,6 +13,10 @@ function Release(name, path, link) {
 }
 
 const RELEASES = [
+  new Release("HALCYON SOUND VOL 2", "_4.png", "https://go.halcyon.fm/halsound2"),
+  new Release("ENDURANCE", "_3.png", "https://go.halcyon.fm/endurance"),
+  new Release("THE COMEDOWN", "_2.png", "https://go.halcyon.fm/thecmdwn"),
+  new Release("PERCEIVER PT 2", "_1.png", "https://go.halcyon.fm/realitysim"),
   new Release("SUPER POSITION", "superposition.png", "https://go.halcyon.fm/superposition"),
   new Release("ANCIENT", "ancient.png", "https://go.halcyon.fm/ancient"),
   new Release("EXPLORATIVE SCENERY - STASYS", "explorative_scenery.png", "https://go.halcyon.fm/explrtivescnry"),
