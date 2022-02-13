@@ -1,6 +1,6 @@
 {
   "name": "halcyon",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "private": true,
   "proxy": "http://192.168.87.29:3000",
   "devDependencies": {
