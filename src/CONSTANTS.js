@@ -7,7 +7,7 @@ const LINKS = {
 
 function Release(name, path, link) {
   this.name = name;
-  this.path = "/RELEASES/" + path;
+  this.path = "r/" + path;
   this.link = link;
   this.img = path;
 }

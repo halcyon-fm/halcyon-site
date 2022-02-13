@@ -60,7 +60,7 @@ class App extends Component {
               <NavLink to="/contact">CONTACT</NavLink>
             </li>
             <li className="shop">
-              <a href="https://www.shop.halcyon.fm" >SHOP</a>
+              <a href="https://shop.halcyon.fm" >SHOP</a>
             </li>
           </ol>
         </nav>
