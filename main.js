@@ -60,8 +60,8 @@ app.post("/contact", [
     let transporter = nodemailer.createTransport({
       service: "gmail",
       auth: {
-        user: "zyshara@halcyon.fm",
-        pass: "xviwsxnpfwtlmtyn"
+        user: "EMAIL_HERE",
+        pass: "PASSWORD_HERE"
       },
     });
 
