@@ -43,6 +43,15 @@
     }
 }
 
+@keyframes rainbow {
+    from {
+        filter: hue-rotate(deg);
+    }
+    to {
+        filter: hue-rotate(720deg);
+    }
+}
+
 @keyframes scroll-clouds {
     from {
         background-position-x: 0px;
