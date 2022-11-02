@@ -6,10 +6,10 @@
 /** External imports **/
 import React from 'react';
 
-/** Project imports **/
+/** Project imports - JS **/
 //-
 
-/** Style imports **/
+/** Project imports - CSS **/
 import "CSS/animations.scss";
 import "CSS/index.scss";
 

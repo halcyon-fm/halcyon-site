@@ -6,7 +6,7 @@
 /** External imports **/
 import React from 'react';
 import { 
-    createRoot
+    createRoot,
 } from 'react-dom/client';
 import {
     BrowserRouter,
@@ -19,6 +19,7 @@ import Error from 'Components/Error';
 import Layout from 'Components/Layout';
 
 import Home from './Home';
+import Releases from './Releases';
 
 /** Project imports - CSS **/
 import 'CSS/global.scss';
@@ -31,7 +32,7 @@ root.render(
             <Routes>
                 <Route element={<Layout />}>
                     <Route index element={<Home />} />
-                    <Route path='/releases' element={<Home />} />
+                    <Route path='/releases' element={<Releases />} />
                     <Route path='/contact' element={<Home />} />
                     <Route element={<Error />} />
                 </Route>
