@@ -1,16 +1,26 @@
-const path = require("path");
-const HtmlWebpackPlugin = require("html-webpack-plugin");
-const CopyPlugin = require("copy-webpack-plugin");
+/*
+ *  filename: webpack.config.js
+ *  description: --
+ **/
+
+const path = require('path');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
-    entry: "./src/index.js",
+    entry: {
+        home: './src/index.js',
+    },
     module: {
         rules: [
+            {
+                test: /\.(woff|woff2|eot|ttf|otf)$/i,
+                type: 'asset/resource',
+            },
             {
                 test: /\.?js$/,
                 exclude: /node_modules/,
                 use: {
-                    loader: "babel-loader",
+                    loader: 'babel-loader',
                     options: {
                         presets: ['@babel/preset-env', '@babel/preset-react']
                     }
@@ -18,46 +28,49 @@ module.exports = {
             },
             {
                 test: /\.css$/i,
-                use: ["style-loader", "css-loader"],
-            },
-            {
-                test: /\.(jpe?g|png|gif|svg)$/i, 
-                type: "asset/resource"
-            },
-            {
-                test: /\.(js|jsx)$/,
                 exclude: /node_modules/,
-                loader: "babel-loader",
-                options: {
-                    presets: [
-                        '@babel/preset-env',
-                        '@babel/preset-react'
-                    ],
-                    plugins: [
-                        '@babel/transform-runtime'
-                    ]
-                }
-            }
+                use: ['style-loader', 'css-loader'],
+            },
+            {
+                test: /\.(jpe?g|png|gif|svg|mp4)$/i, 
+                exclude: /node_modules/,
+                type: 'asset/resource'
+            },
+            {
+                test: /\.s[ac]ss$/i,
+                exclude: /node_modules/,
+                use: [
+                    'style-loader',
+                    'css-loader',
+                    'sass-loader',
+                ],
+            },
         ]
     },
     devServer: {
-        static: "./build",
+        static: './dist',
         hot: true
     },
     plugins: [
         new HtmlWebpackPlugin({
-            template: path.join(__dirname, "src", "index.html"),
-            favicon: "./src/favicon.png",
-        }),
-        new CopyPlugin({
-            patterns: [
-                { from: "src/RELEASES", to: "r" },
-                { from: "src/website_riff.mp3", to: "website_riff.mp3" }
-            ]
+            inject: true,
+            filename: './home.html',
+            favicon: './assets/images/favicon.png',
+            template: './templates/index.html',
+            chunks: ['home'],
+            title: '✦✧  Halcyon ✧✦',
         }),
     ],
     output: {
-        filename: "main.js",
-        path: path.resolve(__dirname, "build"),
+        filename: '[name].bundle.js',
+        path: path.resolve(__dirname, 'dist'),
     },
+    resolve: {
+        alias: {
+            Components: path.resolve(__dirname, './src/_components'),
+            CSS: path.resolve(__dirname, './assets/scss'),
+            Fonts: path.resolve(__dirname, './assets/fonts'),
+            Images: path.resolve(__dirname, './assets/images'),
+        }
+    }
 };

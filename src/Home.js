@@ -1,26 +1,31 @@
-import React, { Component } from 'react';
+/*
+ *  filename: src/Home.js
+ *  description: -
+ **/
 
-import "./Home.css";
+/** External imports **/
+import React from 'react';
 
-class Home extends Component {
-  componentDidMount() {
-    let root = document.getElementById("root");
-    root.classList = "";
+/** Project imports **/
+//-
 
-    let content = document.getElementsByClassName("content")[0];
-    content.classList = "content";
+/** Style imports **/
+import "CSS/animations.scss";
+import "CSS/index.scss";
 
-    let footer = document.getElementsByTagName("footer")[0];
-    footer.classList = "";
-  }
-
-  render() {
+const Home = ({ props }) => {
     return (
-      <div className="home-contain" key="home-contain">
-        <img key="halcyon-logo" alt="halcyon-logo" width="500px" height="500px" src="/favicon.png" className="logo"/>
-      </div>
+        <div className="home-contain" key="home-contain">
+            <img
+                key="halcyon-logo"
+                alt="halcyon-logo"
+                width="500px"
+                height="500px"
+                src={require('Images/favicon.png')}
+                className="logo"
+            />
+        </div>
     )
-  }
 }
 
 export default Home;

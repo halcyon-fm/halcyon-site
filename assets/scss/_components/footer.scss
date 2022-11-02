@@ -1,0 +1,34 @@
+/*
+ *  filename: assets/scss/_components/footer.scss
+ *  description: -
+ **/
+
+footer {
+    width: 100%;
+
+    .footer-icon-contain {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    
+        .footer-icon {
+            margin: 10px;
+            fill: #fff;
+            cursor: pointer;
+            user-select: none;
+            transition: fill 1s;
+
+            &:hover {
+                animation: nav-glow 2.5s ease-in-out infinite alternate;
+                fill: #ff7bb5;
+            }
+        }
+    }
+        
+    .copyright {
+        text-align: center;
+        font-size: 14px;
+        color: #fff;
+        margin: 10px;
+    }
+}
