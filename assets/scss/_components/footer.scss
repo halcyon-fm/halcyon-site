@@ -16,7 +16,7 @@ footer {
             fill: #fff;
             cursor: pointer;
             user-select: none;
-            transition: fill 1s;
+            transition: fill 500ms;
 
             &:hover {
                 animation: nav-glow 2.5s ease-in-out infinite alternate;
