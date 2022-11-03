@@ -12,8 +12,42 @@ import React, {
 /** Project imports - JS **/
 //-
 
+/** Project imports - SVG **/
+import Spinner from 'Images/spinner.svg';
+
 /** Project imports - CSS **/
 import 'CSS/releases.scss';
+
+const Release = (props) => {
+    const [loaded, setLoaded] = useState(0);
+
+    useEffect(() => {
+        const img = new Image();
+        img.onload = () => {
+            setLoaded(1);
+        };
+        img.src = props.release.cover;
+    });
+
+    return (
+        <div
+            className='release'
+            title={props.release.name}
+            onClick={() => { window.open(props.release.fan_link) }}
+            key={props.release.name.replace(' ', '-').toLowerCase()}
+        >
+            <div className={`placeholder ${loaded ? 'fade-out' : ''}`}>
+                <img src={Spinner}/>
+            </div>
+            <img
+                className={`invisible ${loaded ? 'fade-in' : ''}`}
+                name={props.release.name}
+                src={props.release.cover}
+                alt={props.release.name}
+            />
+        </div>
+    )
+};
 
 const Releases = (props) => {
     const [releases, setReleases] = useState([]);
@@ -33,25 +67,13 @@ const Releases = (props) => {
     }, []);
 
     return (
-        <>
-            {
-                releases.map((release) => {
-                    return (
-                        <div
-                            className='release'
-                            title={release.name}
-                            onClick={() => { window.open(release.fan_link) }}
-                        >
-                            <img
-                                name={release.name}
-                                src={release.cover}
-                                alt={release.name}
-                            />
-                        </div>
-                    )
-                })
-            }
-        </>
+        <div className={releases.length ? 'fade-in' : 'invisible'}>
+            <div className='float-container'>
+                {
+                    releases.map((release) => <Release release={release}/>)
+                }
+            </div>
+        </div>
     )
 };
 

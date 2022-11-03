@@ -25,20 +25,15 @@ body {
 
 #root {
     display: flex;
-    width: 100%;
-    height: 100%;
     flex-direction: column;
+    min-height: 100vh;
 }
 
 .main-content {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100%;
-
-    //@media (max-width: 600px) {
-    //    margin: 50px 10px 50px 10px;
-    //}
+    min-height: calc(100vh - 50px - 86px);
 }
 
 .clouds {
