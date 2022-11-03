@@ -12,9 +12,6 @@ import React, {
 /** Project imports - JS **/
 //-
 
-/** Project imports - SVG **/
-import Spinner from 'Images/spinner.svg';
-
 /** Project imports - CSS **/
 import 'CSS/releases.scss';
 
@@ -36,9 +33,7 @@ const Release = (props) => {
             onClick={() => { window.open(props.release.fan_link) }}
             key={props.release.name.replace(' ', '-').toLowerCase()}
         >
-            <div className={`placeholder ${loaded ? 'fade-out' : ''}`}>
-                <img src={Spinner}/>
-            </div>
+            <div className={`placeholder ${loaded ? 'fade-out' : ''}`}/>
             <img
                 className={`invisible ${loaded ? 'fade-in' : ''}`}
                 name={props.release.name}
