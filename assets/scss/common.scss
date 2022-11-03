@@ -1,0 +1,14 @@
+/*
+ *  filename: assets/scss/common.scss
+ *  description: -
+ **/
+
+.fade-in {
+    opacity: 0;
+    animation: fade-in 500ms ease-in forwards;
+}
+
+.fade-out {
+    opacity: 1;
+    animation: fade-out 500ms ease-in forwards;
+}

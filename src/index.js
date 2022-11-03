@@ -22,6 +22,7 @@ import Home from './Home';
 import Releases from './Releases';
 
 /** Project imports - CSS **/
+import 'CSS/common.scss';
 import 'CSS/global.scss';
 
 const container = document.getElementById('root');

@@ -16,6 +16,7 @@ html, body {
 }
 
 body {
+    overflow-y: scroll;
     background-image: url('Images/background.png');
     background-attachment: fixed;
     background-position: bottom;
@@ -54,4 +55,18 @@ body {
     @media (max-width: 600px) {
         background-position: center 130%;
     }
+}
+
+// -- Scroll Bar Styles -- //
+::-webkit-scrollbar {
+  width: 10px;
+  position: absolute;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #f7c5bd;
 }

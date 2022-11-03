@@ -4,8 +4,15 @@
  **/
 
 /** External imports **/
-import React from 'react';
-import { Outlet, useLocation } from 'react-router-dom';
+import React, {
+    useEffect,
+    useState,
+} from 'react';
+import {
+    Outlet,
+    useLocation,
+    useOutlet,
+} from 'react-router-dom';
 
 /** Project imports - JS **/
 import Navbar from 'Components/Navbar';
@@ -16,15 +23,48 @@ import Stars from 'Components/Stars';
 //-
 
 const Layout = ({ props }) => {
-    const location = useLocation();
+
+    // -- Outlet delay for fade in/fade out transition --/
+    const [outlet, setOutlet] = useState(useOutlet());
+    const [location, setLocation] = useState(useLocation());
+    const [transition, setTransition] = useState('fade-in');
+
+    const nextLocation = useLocation();
+    const nextOutlet = useOutlet();
+
+    useEffect(() => {
+        if (location.pathname !== nextLocation.pathname) {
+            setTransition('fade-out');
+            setTimeout(() => {
+                setLocation(nextLocation);
+                setOutlet(nextOutlet);
+                setTransition('fade-in');
+            }, 500);
+        }
+    });
+
+    //-- Title animation --//
+    useEffect(() => {
+        let title = 0;
+        setInterval(() => {
+            if (title === 0) {
+                document.title = '✦✧  Halcyon ✧✦';
+                title = 1;
+            }
+            else {
+                document.title = '✧✦ Halcyon ✦✧';
+                title = 0;
+            }
+        }, 1000);
+    }, []);
 
     return(
         <>
             <Stars/>
             <div className='clouds' key='clouds'/>
             <Navbar/>
-            <div className='main-content' pathname={ location.pathname }>
-                <Outlet/>
+            <div className={`main-content ${transition}`} pathname={location.pathname}>
+                { outlet }
             </div>
             <Footer/>
         </>

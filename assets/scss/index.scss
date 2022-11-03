@@ -3,24 +3,22 @@
  *  description: -
  **/
 
-.logo {
-    animation: float 6s ease-in-out infinite, glow 3s ease-in-out infinite alternate;
-    filter: drop-shadow(0px 5px 10px #fff);
-    -webkit-filter: drop-shadow(0px 5px 10px #fff);
+//-- Variables --/
+$FLOAT-MS: 6000ms;
+$GLOW-MS: 3000ms;
+
+//-- Route => ('/') Styles --/
+.main-content[pathname='/'] {
     height: 100%;
-    width: 100%;
-    max-height: 600px;
-    max-width: 600px;
-    z-index: -2;
-}
 
-.home-contain {
-    z-index: -2;
-    opacity: 0;
-    animation: fade-in 3s ease-in forwards;
-    margin: 10px;
-}
-
-.fade-out {
-    animation: fade-out 3s ease-in forwards;
+    img {
+        animation: float $FLOAT-MS ease-in-out infinite, glow $GLOW-MS ease-in-out infinite alternate;
+        filter: drop-shadow(0px 5px 10px #fff);
+        height: 100vw;
+        width: 100vw;
+        max-height: 500px;
+        max-width: 500px;
+        z-index: -2;
+        margin: 10px;
+    }
 }
