@@ -19,6 +19,7 @@ import Error from 'Components/Error';
 import Layout from 'Components/Layout';
 
 import Home from './Home';
+import Contact from './Contact';
 import Releases from './Releases';
 
 /** Project imports - CSS **/
@@ -34,7 +35,7 @@ root.render(
                 <Route element={<Layout />}>
                     <Route index element={<Home />} />
                     <Route path='/releases' element={<Releases />} />
-                    <Route path='/contact' element={<Home />} />
+                    <Route path='/contact' element={<Contact />} />
                     <Route element={<Error />} />
                 </Route>
             </Routes> 
