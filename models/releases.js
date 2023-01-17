@@ -13,8 +13,8 @@
 const StrapiService = require('../services/strapi.js')
 
 class Release {
-    constructor({ title, fan_link, cover }) {
-        this.name = title;
+    constructor({ name, fan_link, cover }) {
+        this.name = name;
         this.fan_link = fan_link;
         this.cover = cover.data?.attributes?.url || '';
     }
