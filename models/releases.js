@@ -19,7 +19,7 @@ class Release {
       this.title = title;
       this.release_date = release_date;
       this.fanlink = fanlink;
-      this.cover_art = cover_art;
+      this.cover_art = cover_art?.data?.attributes?.url;
    }
 }
 

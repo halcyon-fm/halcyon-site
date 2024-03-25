@@ -19,11 +19,11 @@ const Release = (props) => {
     const [loaded, setLoaded] = useState(0);
 
     useEffect(() => {
-        //const img = new Image();
-        //img.onload = () => {
-        //    setLoaded(1);
-        //};
-        //img.src = props.release.cover;
+        const img = new Image();
+        img.onload = () => {
+            setLoaded(1);
+        };
+        img.src = props.release.cover_art;
     });
 
     return (
