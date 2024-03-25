@@ -35,7 +35,7 @@ const Release = (props) => {
         >
             <div className={`placeholder ${loaded ? 'fade-out' : ''}`}/>
             <img
-                className={`invisible ${loaded ? 'fade-in' : ''}`}
+                className={`${loaded ? 'fade-in' : ''}`}
                 name={props.release.name}
                 src={props.release.cover_art}
                 alt={props.release.name}
