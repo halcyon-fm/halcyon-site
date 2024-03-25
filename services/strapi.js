@@ -13,7 +13,7 @@ const axios = require('axios')
 //-
 
 class StrapiService {
-   static BASE_URL = 'https://secret-dusk-99089.herokuapp.com/api/';
+   static BASE_URL = 'https://halcyon-strapi-09150cafb517.herokuapp.com/api/';
 
    static async fetch(endpoint) {
       const token = process.env.STRAPI_API_TOKEN;

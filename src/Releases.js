@@ -19,25 +19,25 @@ const Release = (props) => {
     const [loaded, setLoaded] = useState(0);
 
     useEffect(() => {
-        const img = new Image();
-        img.onload = () => {
-            setLoaded(1);
-        };
-        img.src = props.release.cover;
+        //const img = new Image();
+        //img.onload = () => {
+        //    setLoaded(1);
+        //};
+        //img.src = props.release.cover;
     });
 
     return (
         <div
             className='release'
             title={props.release.name}
-            onClick={() => { window.open(props.release.fan_link) }}
+            onClick={() => { window.open(props.release.fanlink) }}
             key={props.release.name.replace(' ', '-').toLowerCase()}
         >
             <div className={`placeholder ${loaded ? 'fade-out' : ''}`}/>
             <img
                 className={`invisible ${loaded ? 'fade-in' : ''}`}
                 name={props.release.name}
-                src={props.release.cover}
+                src={props.release.cover_art}
                 alt={props.release.name}
             />
         </div>
@@ -52,7 +52,7 @@ const Releases = (props) => {
             fetch('/api/releases')
             .then((response) => response.json())
             .then((data) => {
-                setReleases(data.releases.reverse())
+               setReleases(data.releases)
             });
         }
         catch (error) {
